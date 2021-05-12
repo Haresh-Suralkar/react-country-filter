@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import CountryList from './Components/CountryList';
+import Search from './Components/Search';
+import {response} from './response.js';
+import {useState} from 'react'
+import 'h8k-components';
 
+const title = "Country Filter";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [searchTerm, setSearchTerm] = useState('')
+    return (
+        <div className="App">
+            <h8k-navbar header={title}></h8k-navbar>
+            <section className="w-30 justify-content-center layout-column mt-30 mx-auto">
+                <Search 
+                searchTerm={searchTerm}
+                setSearchTerm={setSearchTerm}
+                />
+                <CountryList 
+                countries={response}
+                searchTerm={searchTerm}
+                />
+            </section>
+        </div>
+    );
 }
 
 export default App;

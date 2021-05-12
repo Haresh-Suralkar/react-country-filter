@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# React: Country Filter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Given a partially completed React application with the HTML template built and ready, your task is to implement a filter that searches and displays matching countries in a list.
 
-## Available Scripts
 
-In the project directory, you can run:
+Certain core React functionalities have already been implemented. Complete the React application in order to pass all the unit tests.
 
-### `yarn start`
+**Application Demo:**  
+![](https://hrcdn.net/s3_pub/istreet-assets/qilbsKltcR6vtc-6zMHAXw/f.gif)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The application has 2 components:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. The Search view, which has the input box where the user can type to filter countries.
 
-### `yarn test`
+2. The CountryList view, which renders the list of countries that are filtered.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+The entire list of countries to be displayed is stored in a variable named response inside the file `src/response.js`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The app should implement the following functionalities:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- The initial view should render an empty input box with all countries appearing in the same order as in the `response` variable.
 
-### `yarn eject`
+- On typing a character, each country containing the set of typed characters should be filtered and displayed.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- The filtering done over the country list should be case insensitive.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- When there is no character typed in the search box, it should show all countries.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Note:
 
-## Learn More
+- Get the list of countries to be displayed from the `response.js` file.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The order in which each country appears should follow the same order in the `response.js` file, even after filtering.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The following data-testid attributes are required in the component for the tests to pass:
 
-### Analyzing the Bundle Size
+- The countries filter field `<input>` tag should have the data-testid attribute `filterInput`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- The countries wrapper `<ul>` tag should have the data-testid attribute `countryList`.
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Please note that the component has the above data-testid attributes for test cases. It is advised not to change them.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Environment 
 
-### Deployment
+- React Version: 16.13.1
+- Default Port: 8000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `yarn build` fails to minify
+**Read Only Files**
+- `src/App.test.js`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+**Commands**
+- run: 
+```bash
+npm start
+```
+- install: 
+```bash
+npm install
+```
+- test: 
+```bash
+npm test
+```
+
