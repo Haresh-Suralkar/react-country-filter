@@ -1,10 +1,5 @@
 # React: Country Filter
 
-Given a partially completed React application with the HTML template built and ready, your task is to implement a filter that searches and displays matching countries in a list.
-
-
-Certain core React functionalities have already been implemented. Complete the React application in order to pass all the unit tests.
-
 **Application Demo:**  
 ![](https://hrcdn.net/s3_pub/istreet-assets/qilbsKltcR6vtc-6zMHAXw/f.gif)
 
@@ -18,15 +13,15 @@ The application has 2 components:
 The entire list of countries to be displayed is stored in a variable named response inside the file `src/response.js`.
 
 
-The app should implement the following functionalities:
+The app implements the following functionalities:
 
-- The initial view should render an empty input box with all countries appearing in the same order as in the `response` variable.
+- The initial view renders an empty input box with all countries appearing in the same order as in the `response` variable.
 
-- On typing a character, each country containing the set of typed characters should be filtered and displayed.
+- On typing a character, each country containing the set of typed characters is filtered and displayed.
 
-- The filtering done over the country list should be case insensitive.
+- The filtering done over the country list is case insensitive.
 
-- When there is no character typed in the search box, it should show all countries.
+- When there is no character typed in the search box, it shows all countries.
 
 
 Note:
